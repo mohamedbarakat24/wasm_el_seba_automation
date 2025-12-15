@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Wasm El Seba Test Suite">
+
+    <test name="Common Pages Tests">
+        <classes>
+            <class name="tests.common.CommonPagesTest"/>
+        </classes>
+    </test>
+
+    <test name="Mushark Login Tests">
+        <classes>
+            <class name="tests.mushark.MusharkLoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Mushark SignUp Tests">
+        <classes>
+            <class name="tests.mushark.MusharkSignUpTest"/>
+        </classes>
+    </test>
+
+    <test name="Voter Login Tests">
+        <classes>
+            <class name="tests.voter.VoterLoginTest"/>
+        </classes>
+    </test>
+
+    <test name="Voter Register Tests">
+        <classes>
+            <class name="tests.voter.VoterRegisterTest"/>
+        </classes>
+    </test>
+
+</suite>
