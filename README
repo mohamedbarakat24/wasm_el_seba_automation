@@ -1,1 +1,46 @@
+# Wasm El Seba — Automation (Simple)
 
+Lightweight Selenium + TestNG automation for the Wasm El Seba website.
+
+## Quick start
+1. Clone:
+   git clone https://github.com/mohamedbarakat24/wasm_el_seba_automation.git
+2. Enter folder:
+   cd wasm_el_seba_automation
+3. Run all tests:
+   mvn clean test
+
+Run in headless (CI-like) mode:
+- Unix/macOS: CI=true mvn test
+- Windows PowerShell: $env:CI='true'; mvn test
+
+## Theme (UI)
+Tests can run against different UI themes (light / dark) if the site supports it.
+
+- Default: light theme.
+- To run with dark theme (if your tests/pages support a theme flag), pass a Maven property:
+  mvn -Dtheme=dark test
+
+You can also set THEME in GitHub Actions job env:
+```yaml
+env:
+  CI: true
+  THEME: dark
+```
+
+(If your tests need a specific action to switch theme, add a small helper in your BaseTest or page objects that applies the theme before running assertions.)
+
+## Debugging tips
+- If tests pass locally but fail in CI:
+  - Run locally in headless: CI=true mvn test
+  - Capture screenshots and page source on failure
+  - Increase waits for slow UI elements (OTP modals, toasts)
+
+## Project layout (short)
+- src/main/java — pages, locators, helpers
+- src/test/java — tests, BaseTest, listeners
+- testng.xml — suite config
+- .github/workflows/run-tests.yml — CI workflow
+
+## Contact
+Open an issue in this repo for help or improvements.
