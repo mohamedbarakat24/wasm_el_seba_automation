@@ -1,6 +1,6 @@
 # wasm_el_seba_automation
 
-UI test automation project for **Wasm El Seba** website using **Java + Selenium + TestNG + Maven**.
+UI test automation project for Wasm El Seba website using Java + Selenium + TestNG + Maven.
 
 ## What is inside
 - Common Pages tests
